@@ -54,7 +54,7 @@ Route::get('/showcart',[HomeController::class,'showcart']);
 Route::get('/cancel_appoint/{id}',[HomeController::class,'cancel_appoint']);
 Route::get('/approved/{id}',[HomeController::class,'approved']);
 Route::get('/canceled/{id}',[HomeController::class,'canceled']);
-Route::get('/remove_order/{id}',[HomeController::class,'remove_order']);
+Route::get('/finsh_order/{id}',[HomeController::class,'finsh_order']);
 
 
 //

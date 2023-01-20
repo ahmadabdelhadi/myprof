@@ -72,11 +72,11 @@
 
     <td style="padding:10px; font-size: 15px;">حالة الطلب</td>
     <td style="padding:10px; font-size: 15px;width:352px">إدارة الطلب </td>
+
     </tr >
     @foreach ($cart as $carts)
     <tr align="center">
       <td style="padding:10px; font-size: 15px;">{{$carts->id}}</td>
-      <td style="padding:10px; font-size: 15px;">{{  $carts->s_id}}</td>
 
     
       <td style="padding:10px; font-size: 15px;">{{$carts->stu_name}}</td>
@@ -90,22 +90,26 @@
       <td style="padding:10px; font-size: 15px;">{{$carts->stu_city}} / {{$carts->stu_address}} </td>
       <td style="margin-top:15px;padding:5px; font-size: 20px;" > <button class="btn btn-light"> <a  href="{{url('chatify/' . $carts->s_id)}}">لفتح المحادثة اضغط هنا</a></button></td>
 
-      <td style="padding:10px; font-size: 15px;color:rgb(0, 179, 0)">{{$carts->status}} </td>
+      <td style="padding:10px; font-size: 15px;" class="status-{{$carts->status}}">{{$carts->status}} </td>
 
       <td style="padding:10px; font-size: 15px;" width="200px;">
-        {{-- @unless($carts->status == 'مقبول' OR $carts->status == 'ملغي' ) --}}
      
-      
-        @unless($carts->status == 'مقبول' OR$carts->status == 'ملغي' )
+         @unless($carts->status == 'مقبول' OR$carts->status == 'ملغي'  or  $carts->status == 'تم التسليم')
         <a href="{{url('approved',$carts->id)}}" onclick="return confirm('هل أنت متأكد من قبول هذا الطلب؟')" class="btn btn-success">  قبول</a>
 
         @endunless
-        @unless($carts->status == 'ملغي'  )
-        <a href="{{url('cancel_appoint',$carts->id)}}" onclick="return confirm('هل أنت متأكد من قبول هذا الطلب؟')" class="btn btn-danger">  الغاء</a>
+        @unless($carts->status == 'ملغي' or$carts->status == 'تم التسليم' )
+        <a href="{{url('cancel_appoint',$carts->id)}}" onclick="return confirm('هل أنت متأكد من الغاء هذا الطلب؟')" class="btn btn-danger" >  الغاء</a>
 
         @endunless
+        @unless( $carts->status == 'ملغي' or  $carts->status == 'تم التسليم'  )
 
-        <a href="{{url('remove_order',$carts->id)}}" onclick="return confirm('هل أنت متأكد من حذف هذا الطلب؟')" style="text-align:center;" class="btn btn-secondary">حذف  </a>
+        <a href="{{url('finsh_order',$carts->id)}}" onclick="return confirm('هل أنت متأكد من حذف هذا الطلب؟')" style="text-align:center;" class="btn btn-secondary">تم التسليم  </a>
+        
+        </select>
+        
+        @endunless
+        
 
        </td>
      

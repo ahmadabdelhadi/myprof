@@ -380,34 +380,7 @@ header .navbar {
 
 .banner-item-01 {
     padding: 300px 0px;
-    /* overflow: hidden; */
-    background-image: url(../images/slidess.webp);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center center;
-    /* transform: translatex(18%); */
-}
-
-.banner-item-01 button {
-    width: 249px;
-    height: 75px;
-    transform: translate(-241%, -295%);
-    background-color: #01B3FF;
-    color: white;
-    text-decoration: none;
-}
-
-.banner-item-02 {
-    padding: 300px 0px;
-    background-image: url(../images/slide5.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center center;
-}
-
-.banner-item-03 {
-    padding: 300px 0px;
-    background-image: linear-gradient(to top, rgba(42, 13, 61, 0.7), rgba(3, 14, 77, 0.7)), url(../images/slide5555.jpg);
+    background-image: url(../images/slide111.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
@@ -1132,4 +1105,19 @@ footer .inner-content p a {
         right: 0;
         bottom: 0;
     }
+}
+
+.status-مقبول {
+    color: rgb(0, 180, 0);
+}
+
+.status-ملغي {
+    color: rgb(255, 0, 0);
+}
+
+
+/* ما زبط تغير لون الكلمة لما يكون من مقطعين */
+
+.status-تم-التسليم {
+    color: blue;
 }

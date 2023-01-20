@@ -111,20 +111,6 @@
             <h2>Get your best teacher</h2> --}}
           </div>
         </div>
-        <div class="banner-item-02">
-          <div class="text-content">
-            {{-- <h4>Flash Deals</h4>
-            <h2>Get your best products</h2> --}}
-          </div>
-        </div>
-        <div class="banner-item-03">
-          <div class="text-content">
-            {{--  --}}
-          </div>
-        </div>
-        
-      </div>
-      <div >
         @if(session()->has('message'))
 <div dir="rtl" class="alert alert-success" >
 <button  type= "button" class="close" data-dismiss="alert">x</button>
@@ -181,7 +167,7 @@
               <div class="row">
                 <div class="col-md-8" >
                   <h4 style="text-align:right;" > : <a href="/register"><strong class="color-primary">ملاحظة قبل الحجز </strong></a></h4>
-                  <h4 style="text-align:right;" > اختر الاستاذ المناسب ومن ثم ضع الوقت المناسب لك وانتظر الرد من الاستاذ </h4>
+                  <h4 style="text-align:right;" > اختر الاستاذ المناسب ومن ثم ضع الوقت المناسب لك وانتظر الرد من الاستاذ على شات الموقع </h4>
                 </div> 
                  <div class="col-md-4" style="text-align:left;" >
                   <a href="/teachers_Page" style="text-align:left;" class="filled-button bg-primary">احجز الان</a>
@@ -392,7 +378,7 @@
               <li>
                   <a>•	كيف أقوم باختيار المعلم المناسب  ؟ </a>
                   <div class="content">
-                      <p style="font-size:15px;">بالذهاب الى صفحة المعلمين , بالنزول للاسف يوجد مربع للبحث عن معلم أو للبحث عن مادة
+                      <p style="font-size:15px;">بالذهاب الى صفحة المعلمين , بالنزول للاسفل يوجد مربع للبحث عن معلم أو للبحث عن مادة
                         بعد البحث يمكنك اختيار المعلم الذي يناسبك</p>
                   </div>
               </li>
@@ -429,14 +415,6 @@
                     
                 </div>
             </li>
-            <li>
-              <a>•مكان اعطاء المحاضرات ؟</a>
-              <div class="content">
-                  <p>للطرفين حرية الاختيار بما يناسبهما , ولكن نحن كموقع نقترح برنامج (zoom) </p>
-                  <p>اتبع الرابط التالي لتنزيل برنامج </p> <a href="https://zoom.us/" target="_blank">للتحميل اضغط هنا </a> 
-
-              </div>
-          </li>
           <li>
             <a>•مكان اعطاء المحاضرات ؟</a>
             <div class="content">

@@ -500,13 +500,15 @@ public function canceled($id){
 
 }
 // فنكشن للمعلم حتى ما تصير صفحته مليانة حجوزات ملغية , ضفنا زر حذف الطلب
-public function remove_order($id){
+public function finsh_order($id){
     if(auth::user()->role_id=='2' )
    {
     $data=cart::find($id);
-    $data->delete();
+   
+    $data ->status='تم التسليم';
+    $data->save();
 
-    return redirect()->back()->with('message','تم حذف الطلب بنجاح');
+    return redirect()->back()->with('message','تم تسليم الطلب بنجاح');
 }
 else if (auth::user()->role_id=='1' ){
     $data=cart::find($id);

@@ -112,19 +112,33 @@ th, td {
       {{-- <a href="{{ route('chatify', ['id' => $carts->id]) }}" class="btn btn-primary">Chat with user</a> --}}
       
         
-      <td style="padding:10px; font-size: 15px;color:rgb(0, 179, 0);">{{$carts->status}} </td>
+      <td style="padding:10px; font-size: 15px;" class="status-{{$carts->status}}">{{$carts->status}} </td>
       <td style="padding:10px; font-size: 15px;">
         {{-- // لما الطلب ينقبل من عند الاستاذ الطالب ما يقدر يلغيه
         // امكانية الغاء الطلب بتكون قبل ما الاستاذ يوافق  --}}
 
-        @unless($carts->status == 'مقبول' OR $carts->status == 'ملغي' )
+        @unless($carts->status == 'مقبول' OR $carts->status == 'ملغي' OR $carts->status == 'تم التسليم' )
         <a class="btn btn-danger" onclick="return confirm('هل أنت متأكد من الغاء هذا الطلب؟')" href="{{url('cancel_appoint',$carts->id)}}">الغاء الحجز </a>      
 
         @endunless
         {{-- <td style="padding:10px; font-size: 15px;color:rgb(0, 179, 0);">{{$user->status}} </td> --}}
 
         {{-- <a href="{{url('cancel_appoint',$carts->id)}}" onclick="return confirm('هل أنت متأكد من الغاء هذا الطلب؟')" class="btn btn-danger">الغاء الحجز </a> --}}
-      
+        @unless($carts->status == 'مقبول' OR $carts->status == 'ملغي' or $carts->status == 'بإنتظار المراجعة'   )
+        <select name="" id="" dir="ltr" style="align-content: center">
+          <option value="1">&#9733;</option>
+          <option value="2">&#9733;&#9733;</option>
+          <option value="3">&#9733;&#9733;&#9733;</option>
+          <option value="4">&#9733;&#9733;&#9733;&#9733;</option>
+          <option value="5">&#9733;&#9733;&#9733;&#9733;&#9733;</option>
+        
+        <input style="display: flex; justify-content: center; align-items: center;">
+          <button type="submit" style="background-color:blue; color:white; width:60px; height:40px; margin: auto;">تقييم</button>
+   
+        
+        </select>
+        @endunless
+
       
       </td>
      

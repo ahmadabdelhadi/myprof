@@ -45,57 +45,6 @@
        @include('teacher.navbar');
 
              
-{{--        
-      <nav class="navbar navbar-expand-lg">
-        <div class="container">
-            
-            
-          <a class="navbar-brand" href="../"><h2>My <em style="color:white;">Professor</em> </h2>
-        <h6 style="text-align: center;color:white;"> Learn To Earn </h6></a>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarResponsive">
-            <ul class="navbar-nav ml-auto">
-              <li class="nav-item active">
-                <a class="nav-link" href="">الرئيسية
-                  <span class="sr-only">(current)</span>
-                </a>
-              </li> 
-              <li class="nav-item">
-                <a class="nav-link" href="teachers_Page" >المعلمين</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="">من نحن؟</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="">اتصل بنا</a>
-              </li>
-            <li class="nav-item">        
-              @if (Route::has('login'))
-              
-                  @auth
-                     
-                        <x-app-layout>
-                    </x-app-layout>
-                
-                  @else
-                  <li> <a class="nav-link" href="{{ route('login') }}" >تسجيل دخول</a></li>
-
-                      @if (Route::has('register'))
-                      <li>  <a class="nav-link" href="{{ route('register') }}" >مستخدم جديد</a></li>
-                      @endif
-                  @endauth
-         
-             @endif
-                </li>
-
-
-
-            </ul>
-          </div>
-        </div>
-      </nav> --}} 
     </header>
 
     <!-- Page Content -->
@@ -109,20 +58,6 @@
             <h2>Get your best teacher</h2> --}}
           </div>
         </div>
-        <div class="banner-item-02">
-          <div class="text-content">
-            {{-- <h4>Flash Deals</h4>
-            <h2>Get your best products</h2> --}}
-          </div>
-        </div>
-        <div class="banner-item-03">
-          <div class="text-content">
-            {{--  --}}
-          </div>
-        </div>
-        
-      </div>
-      <div >
         @if(session()->has('message'))
 <div dir="rtl" class="alert alert-success" >
 <button  type= "button" class="close" data-dismiss="alert">x</button>
@@ -134,63 +69,6 @@
     <!-- Banner Ends Here -->
     {{-- <-------- teachers section --------> --}}
   @include('teacher.teachers')
-
-    {{-- <div class="best-features">
-      <div class="container" dir="rtl">
-        <div class="row">
-          <div class="col-md-12">
-            <div class="section-heading">
-              <h1 style="text-align:right;">من نحن؟</h1>
-            </div>
-          </div>
-          <div class="col-md-6">
-            <div class="left-content">
-
-              <br>
-              <br>
-              <br>
-            <div style="">
-              <h4 style="text-align:right;color:#000000;">نحن فريق من جامعة الحسين بن طلال قررنا إنشاء موقع يسهل على الطالب الوصول الى اساتذة خصوصي لمساعدتهم في دراستهم باسعار مناسبة جداً ومن غير تعب وبسهولة تامة عن طريق موقعنا (MY PROFFESOR).
-              <h4 style="text-align:right;color:#000000;">فهو يسمح للطالب بحجز اي استاذ يريده وحسب الوقت الذي يناسبه ويسمح للمُعلم ان يوافق على حجوزات الطالب عن طريق صفحة تحكم كاملة بالطلبات </h4>
-            </div>
-              
-              </a>
-              </li>
-              </h4> --}}
-
-              
-            {{-- </div>
-          </div> --}}
-          {{-- <div class="col-md-6">
-            <div class="right-image">
-              <img src="https://www.almamlakatv.com/images/articles/big/2019/10/main_image5da6ce12e1250.jpg" alt="">
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
- --}}
-
-    {{-- <div class="call-to-action">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12">
-            <div class="inner-content">
-              <div class="row">
-                
-                {{-- <div class="col-md-8" >
-                  <h4 style="text-align:right;" >اذا كنت <a href="/register"><strong class="color-primary">مستخدم جديد </strong></a></h4>
-                  <h4 style="text-align:right;" >سجل الآن ووفر عليك الكثير من الوقت</h4>
-                </div>
-                <div class="col-md-4" style="text-align:left;" >
-                  <a href="/register" style="text-align:left;" class="filled-button bg-primary">التسجيل الان</a>
-                </div> --}}
-              {{-- </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div> --}}
     <br>
     <div class="page-heading about-heading header-text">
       <div class="container">
@@ -378,14 +256,6 @@
                 
             </div>
         </li>
-        <li>
-          <a>•مكان اعطاء المحاضرات ؟</a>
-          <div class="content">
-              <p>للطرفين حرية الاختيار بما يناسبهما , ولكن نحن كموقع نقترح برنامج (zoom) </p>
-              <p>اتبع الرابط التالي لتنزيل برنامج </p> <a href="https://zoom.us/" target="_blank">للتحميل اضغط هنا </a> 
-
-          </div>
-      </li>
       <li>
         <a>•مكان اعطاء المحاضرات ؟</a>
         <div class="content">

@@ -206,11 +206,11 @@
                             </div>
 
                             <div class="form-group">
-                                <div class="mt-4" style="transform: translate(0%, -12%)">
-                                    <x-jet-label for="city" value="{{ __('المحافظة') }}" />
+                                <div class="mt-4" style="transform: translate(0%, -12%);">
+                                    <x-jet-label  for="city" value="{{ __('المحافظة') }}" />
                                     
                                     {{-- <x-jet-input id="city" class="block mt-1 w-full" type="text" name="city" :value="old('city')" required /> --}}
-                                    <select style="color:black; width:200px;text-align:left" id="city" type="text" name="city":value="old('city')"  required="" >
+                                    <select style="color:black; width:185px;text-align:left" id="city" type="text" name="city":value="old('city')"  required="" >
                                         <option value="عمان">عمان</option>
                                         <option value="اربد">اربد</option>
                                         <option value="الزرقاء">الزرقاء</option>
@@ -267,12 +267,12 @@
                                                 </div>
                               
                                                 <div class="form-group">
-                                                    <div class="mt-4 ml-80">
+                                                    <div class="mt-4 ml-80" style="transform: translate(0%, 10%)">
                                                         <x-jet-label for="gender" value="{{ __('الجنس ؟') }}" />
                                                         {{-- <x-jet-input class="gender" name="gender" class="block mt-1 w-full"  :value="old('gender')" required /> --}}
                                         
                                                         {{-- <x-jet-input id="city" class="block mt-1 w-full" type="text" name="city" :value="old('city')" required /> --}}
-                                                        <select style="color:black; width:200px;text-align:left" id="gender" type="text" name="gender":value="old('gender')"  required="" >
+                                                        <select style="color:black; width:181px;text-align:left" id="gender" type="text" name="gender":value="old('gender')"  required="" >
                                                             <option value="ذكر">ذكر</option>
                                                             <option value="انثى">انثى</option>
                                                         </select>
@@ -280,7 +280,7 @@
                                                              </div>
                                                              
                                                 <div class="form-group">
-                                                    <div class="mt-4"  style="transform: translate(0%, -12%)" >
+                                                    <div class="mt-4"  style="transform: translate(1%, 12%)" >
                                                     <x-jet-label for="password_confirmation" value="{{ __('تأكيد كلمة السر') }}" />
                                                     <x-jet-input id="password_confirmation" class="block mt-1 w-full" type="password" name="password_confirmation" required autocomplete="new-password" />
                                                                                             
@@ -482,7 +482,7 @@
                                     </div>
                                 </div>
     
-                                <div class="form-group">
+                                <div class="form-group" >
                                     <div class="mt-4" style="transform: translate(0%, -12%)">
                                         <x-jet-label for="city" value="{{ __('المحافظة') }}" />
                                         
