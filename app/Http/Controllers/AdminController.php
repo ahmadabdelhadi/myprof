@@ -273,7 +273,7 @@ public function approve($id){
 }
 public function cancel($id){
     $data=user::find($id);
-    $data->status='مرفوض';
+    $data->status='ملغي';
     $data->save();
     return redirect()->back();
 
@@ -317,10 +317,22 @@ public function search_request(Request $request )
     orwhere('t_phone','Like','%'.$search_request.'%')->
     orwhere('Study_Type','Like','%'.$search_request.'%')->
     orwhere('time','Like','%'.$search_request.'%')->
+    orwhere('status','Like','%'.$search_request.'%')->
 
     get();
     return view('admin.showcarts',compact('cart'));
 }
+public function finsh_order($id){
+  
+    $data=cart::find($id);
+   
+    $data ->status='تم_التسليم';
+    $data->save();
 
+    return redirect()->back()->with('message','تم تسليم الطلب بنجاح');
 }
+}
+
+
+
 

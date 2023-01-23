@@ -1118,6 +1118,10 @@ footer .inner-content p a {
 
 /* ما زبط تغير لون الكلمة لما يكون من مقطعين */
 
-.status-تم-التسليم {
+.status-تم_التسليم {
     color: blue;
+}
+
+.status-بإنتظار_المراجعة {
+    color: light;
 }

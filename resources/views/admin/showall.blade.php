@@ -20,7 +20,7 @@
             <form action="{{url('search_user')}}" method="get" class="form-inline" style="float:right;padding:23px;">
               @csrf
               <div >
-                <div style="transform:translate(-243%,116%);width: 56px;
+                <div style="transform:translate(-250%,116%);width: 56px;
                 height: 30px" width=200px>
               <input type="submit" value="بحث" class="btn btn-success" style="margin-right:5px;background-color: #42b842" >
             </div>
@@ -66,8 +66,8 @@
       <td style="padding:10px; font-size: 15px;">{{$users->city}}</td>
       <td style="padding:10px; font-size: 15px;">{{$users->address}}</td>
            {{-- <td style="padding:10px; font-size: 15px;color:rgb(0, 179, 0)">{{$carts->status}} </td> --}}
-           <td style="padding:10px; font-size: 15px;margin:10px;color:rgb(0, 179, 0)" >{{$users->status}} </td>
-            <td style="padding:10px; font-size: 15px;width:150em;">
+           <td style="padding:10px; font-size: 15px;" class="status-{{$users->status}}">{{$users->status}} </td>
+           <td style="padding:10px; font-size: 15px;width:150em;">
             <a href="{{url('approve',$users->id)}}" onclick="return confirm('هل أنت متأكد من قبول هذا الطلب؟')" class="btn btn-success">  قبول</a>
             </td>
             <td style="padding:10px; font-size: 15px;">

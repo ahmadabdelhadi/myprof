@@ -8,15 +8,18 @@
    
       <!-- partial -->
       @include('admin.sidebar')
-      <div align="center" style="text-align:center">
-      <form action="{{url('search_request')}}" method="get" class="form-inline" style="padding-top:110px;padding-right:10px;align-items:flex-end" dir='rtl' >
+      <div dir=rtl>
+      <form action="{{url('search_request')}}" method="get" class="form-inline"  dir='rtl' >
         @csrf
-        <div >
-          <div>
-        <input type="submit" value="بحث" class="btn btn-success" style="background-color: #42b842" >
-      </div>
-        <input style="color: white" class="form-control" type="search" name="search_request"  dir="rtl">
-      </div>
+        <div style="padding-top:110px;transform:translate(530px, 0px)" dir=rtl >
+          
+    
+        <input style="color: white;
+        transform: translate(135px, 30px);
+        width: 130px" class="form-control" type="search" name="search_request"  >
+        <input type="submit" value="بحث" class="btn btn-success" style="background-color: #42b842;)" >
+
+     </div>
       </form>
     </div>
       @include('admin.navbar')
@@ -78,7 +81,7 @@
       <td style="padding:10px; font-size: 15px;">{{$carts->Study_Type}}</td>
       <td style="padding:10px; font-size: 15px;"width="287px">{{$carts->stu_city}} / {{$carts->stu_address}} </td>
       
-      <td style="padding:10px; font-size: 15px;color:rgb(0, 179, 0)">{{$carts->status}} </td>
+      <td style="padding:10px; font-size: 15px;" class="status-{{$carts->status}}">{{$carts->status}} </td>
 
       {{-- كبسات الالغاء والقبول والحذف --}}
       <td style="padding:10px; font-size: 15px;width:150em;">
@@ -89,7 +92,7 @@
   
          </td>
       <td style="padding:10px; font-size: 15px;">
-        <a href="{{url('remove_order',$carts->id)}}" onclick="return confirm('هل أنت متأكد من حذف هذا الطلب؟')" style="text-align:center;" class="btn btn-secondary">حذف  </a>
+        <a href="{{url('finsh_order',$carts->id)}}" onclick="return confirm('هل أنت متأكد من تسليم هذا الطلب؟')" style="text-align:center;" class="btn btn-secondary">تم التسليم  </a>
 
        </td>
        

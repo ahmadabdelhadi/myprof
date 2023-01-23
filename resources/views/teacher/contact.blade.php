@@ -93,8 +93,8 @@ https://templatemo.com/tm-546-sixteen-clothing
             <ul class="accordion" >
 
         <li>
-<div>            
-     <h2 style="padding:10px;transform:translate(10px, -8px);font-size:27px;" > اسئلة شائعة تخص المعلم:</h2>
+<div>             
+  <h2 style="padding:10px;transform:translate(10px, -8px);font-size:27px;" > اسئلة شائعة تخص المعلم:</h2>
 </div>
                 <a>•كيفية التسجيل بالموقع ؟ </a>
           <div class="content">
@@ -124,7 +124,7 @@ https://templatemo.com/tm-546-sixteen-clothing
         <div class="content" style="font-weight: 900;">
              <p>- بعد اضافتك للموقع ستتمكن من استقبال الحجوزات في صفحة (حجوزاتي) الموجودة في شريط الموقع</p>
             <p> عندما يتم الحجز من قبل الطالب , سيتم عرض بيانات الطالب على شكل جدول</p>
-            <p> . يمكنك كَمعلم عند استقبال حجز من اي طالب (قبول الطلب أو الغاءه أو حذفه من صفحة الحجوزات)</p>
+            <p> . يمكنك كَمعلم عند استقبال حجز من اي طالب (قبول الطلب أو الغاءه أو تسليمه من صفحة الحجوزات)</p>
               <p>
               . عند قبول الطلب , ومن بعدها تم التواصل مع الطالب ولم يتم الاتفاق بينكما ستتمكن من الغاء الحجز وتصبح حالة الطلب ملغي.
               </p>
@@ -134,12 +134,15 @@ https://templatemo.com/tm-546-sixteen-clothing
         <li>
           <a>•	حالة الطلب في صفحة حجوزاتي ؟</a>
         <div class="content" style="font-weight: 900;"> 
-                  <p>.  مقبول - تم قبوله
+                  <p>
+                    . بإنتظار المراجعة - لم يتم قبول الطلب او رفضه
+
+                    <br>
+                    .  مقبول - تم قبوله
                     <br>
                     . ملغي - تم الغاءه
                     <br>
-                    . حذف - سيتم حذف الطلب من صفحة الحجوزات
-                    </p>
+                    . تسليم - تم تسليم الطلب.                    </p>
 
         </div>
         <li>
@@ -187,7 +190,7 @@ https://templatemo.com/tm-546-sixteen-clothing
               <li>
                   <a>•	كيف أقوم باختيار المعلم المناسب  ؟ </a>
                   <div class="content">
-                      <p style="font-size:15px;">بالذهاب الى صفحة المعلمين , بالنزول للاسف يوجد مربع للبحث عن معلم أو للبحث عن مادة
+                      <p style="font-size:15px;">بالذهاب الى صفحة المعلمين , بالنزول للاسفل يوجد مربع للبحث عن معلم أو للبحث عن مادة
                         بعد البحث يمكنك اختيار المعلم الذي يناسبك</p>
                   </div>
               </li>
@@ -274,12 +277,14 @@ https://templatemo.com/tm-546-sixteen-clothing
       </div>
     </div> --}}
 
+    
+    
     <footer>
-      <div class="container" >
-        <div class="row" >
-          <div class="col-md-12" >
-            <div class="inner-content" >
-              <p >Copyright &copy; 2022 My Proffesor  |  learning website
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="inner-content">
+              <p>Copyright &copy; 2022 My Proffesor  |  learning website
             
             - Univ-Design: King Hussien Bin Talal University Str</a></p>
             </div>
@@ -287,7 +292,6 @@ https://templatemo.com/tm-546-sixteen-clothing
         </div>
       </div>
     </footer>
-    
     
 
     <!-- Bootstrap core JavaScript -->

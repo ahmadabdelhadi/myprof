@@ -258,7 +258,7 @@ public function addcart(Request $request, $id){
         // معلومات مشتركة للحجز بين الطرفين المعلم والطالب
         $cart->lesson_price=$teachers->lesson_price;
         $cart->Study_Type=$teachers->Study_Type;
-        $cart->status='بإنتظار المراجعة';
+        $cart->status='بإنتظار_المراجعة';
         // $users->status='بإنتظار المراجعة';
 
         //student information
@@ -505,7 +505,7 @@ public function finsh_order($id){
    {
     $data=cart::find($id);
    
-    $data ->status='تم التسليم';
+    $data ->status='تم_التسليم';
     $data->save();
 
     return redirect()->back()->with('message','تم تسليم الطلب بنجاح');

@@ -71,7 +71,7 @@
     <td style="padding:10px; font-size: 15px;">للتواصل</td>
 
     <td style="padding:10px; font-size: 15px;">حالة الطلب</td>
-    <td style="padding:10px; font-size: 15px;width:352px">إدارة الطلب </td>
+    <td style="padding:10px; font-size: 15px;width:400px">إدارة الطلب </td>
 
     </tr >
     @foreach ($cart as $carts)
@@ -94,17 +94,17 @@
 
       <td style="padding:10px; font-size: 15px;" width="200px;">
      
-         @unless($carts->status == 'مقبول' OR$carts->status == 'ملغي'  or  $carts->status == 'تم التسليم')
+         @unless($carts->status == 'مقبول' OR$carts->status == 'ملغي'  or  $carts->status == 'تم_التسليم')
         <a href="{{url('approved',$carts->id)}}" onclick="return confirm('هل أنت متأكد من قبول هذا الطلب؟')" class="btn btn-success">  قبول</a>
 
         @endunless
-        @unless($carts->status == 'ملغي' or$carts->status == 'تم التسليم' )
+        @unless($carts->status == 'ملغي' or $carts->status == 'تم_التسليم'  )
         <a href="{{url('cancel_appoint',$carts->id)}}" onclick="return confirm('هل أنت متأكد من الغاء هذا الطلب؟')" class="btn btn-danger" >  الغاء</a>
 
         @endunless
-        @unless( $carts->status == 'ملغي' or  $carts->status == 'تم التسليم'  )
+        @unless( $carts->status == 'ملغي' or  $carts->status == 'تم_التسليم'  )
 
-        <a href="{{url('finsh_order',$carts->id)}}" onclick="return confirm('هل أنت متأكد من حذف هذا الطلب؟')" style="text-align:center;" class="btn btn-secondary">تم التسليم  </a>
+        <a href="{{url('finsh_order',$carts->id)}}" onclick="return confirm('هل أنت متأكد من تسليم هذا الطلب؟')" style="text-align:center;" class="btn btn-secondary">تم التسليم  </a>
         
         </select>
         

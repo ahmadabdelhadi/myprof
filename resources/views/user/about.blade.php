@@ -38,7 +38,7 @@ https://templatemo.com/tm-546-sixteen-clothing
             <div></div>
         </div>
     </div>  
-    <!-- ***** Preloader End ***** -->
+   ***** Preloader End ***** -->
 
     <!-- Header -->
     <header class="">
@@ -82,39 +82,6 @@ https://templatemo.com/tm-546-sixteen-clothing
             </div>
         </div>
     </div>
-
-    {{-- <div class="col-md-12" >
-        <div class="owl-clients owl-carousel" >
-            <div class="client-item" >
-                <img src="assets/images/teach2.png" alt="1"  style="width:120px;hight:120px;">
-            </div>
-
-            <div class="client-item">
-                <img src="assets/images/teach3.png" alt="2" style="width:120px;hight:120px;">
-            </div>
-
-            <div class="client-item">
-                <img src="assets/images/teach4.png" alt="3" style="width:120px;hight:120px;">
-            </div>
-
-            <div class="client-item">
-                <img src="assets/images/teach5.webp" alt="4" style="width:120px;hight:120px;">
-            </div>
-
-            <div class="client-item">
-                <img src="assets/images/teach7.webp" alt="5" style="width:120px;hight:120px;">
-            </div>
-
-           
-        </div>
-    </div>
-</div>
-</div>
-</div> --}}
-
-
-    
-
 
 <div class="happy-clients">
 <div class="container">

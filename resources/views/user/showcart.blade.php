@@ -74,14 +74,15 @@ th, td {
   <table  style=" text-align: center" align="center">
   <tr class="table-th" style="background:gray; color:#fff; ">
     <td style="padding:10px; font-size: 15px;width:20px;">رقم الطلب</td>
-    <td style="padding:10px; font-size: 15px;width:20px;">id الطلب</td>
+
 
     <td style="padding:10px; font-size: 15px;">اسم المعلم</td>
     <td style="padding:10px; font-size: 15px;">اسم المادة</td>
     <td style="padding:10px; font-size: 15px; width:150px; ">المرحلة الدراسية </td>
     <td style="padding:10px; font-size: 15px;">رقم الهاتف </td>
-    <td style="padding:10px; font-size: 15px; text-align:auto;">التاريخ &nbsp; / &nbsp; &nbsp;الساعة</td>
-    <td style="padding:10px; font-size: 15px; width:100px;"> سعر الحصة/ساعة  </td>
+    <td style=" font-size: 15px;">التاريخ/الساعة</p> 
+    </td>
+    <td style="padding:10px; font-size: 15px; width:100px"> سعر الحصة/ساعة  </td>
     <td style="padding:10px; font-size: 15px;"> نوع التدريس </td>
     <td style="padding:10px; font-size: 15px;">الموقع</td>
     <td style="padding:10px; font-size: 15px;">للتواصل</td>
@@ -95,7 +96,7 @@ th, td {
     <tr align="center">
 
       <td style="padding:10px; font-size: 15px;">{{$carts->id}} </td>
-      <td style="padding:10px; font-size: 15px;">{{$carts->t_id}} </td>
+
 
       <td style="padding:10px; font-size: 15px;">{{$carts->name}}</td>
       <td style="padding:10px; font-size: 15px;">{{$carts->teacher_Major}}</td>
@@ -105,7 +106,7 @@ th, td {
       <td style="padding:10px; font-size: 15px;">{{$carts->time}}</td>
       <td style="padding:10px; font-size: 15px;">{{$carts->lesson_price}}JD</td>
       <td style="padding:10px; font-size: 15px;">{{$carts->Study_Type}}</td>
-      <td style="padding:10px; font-size: 15px;">{{$carts->city}} / {{$carts->address}} </td>
+      <td style="padding:10px; font-size: 15px;width:120px;">{{$carts->city}} / {{$carts->address}} </td>
       {{-- <td style="margin-top:15px;padding:5px; font-size: 20px;" > <button class="btn btn-light"> <a  href="{{url('chatify/' . $carts->to_id)}}">لفتح المحادثة اضغط هنا</a></button></td> --}}
       <td style="margin-top:15px;padding:5px; font-size: 20px;" > <button class="btn btn-light"> <a  href="{{url('chatify/' . $carts->t_id)}}">لفتح المحادثة اضغط هنا</a></button></td>
   
@@ -117,14 +118,14 @@ th, td {
         {{-- // لما الطلب ينقبل من عند الاستاذ الطالب ما يقدر يلغيه
         // امكانية الغاء الطلب بتكون قبل ما الاستاذ يوافق  --}}
 
-        @unless($carts->status == 'مقبول' OR $carts->status == 'ملغي' OR $carts->status == 'تم التسليم' )
+        @unless($carts->status == 'تم_التسليم' OR $carts->status == 'ملغي' OR $carts->status == 'مقبول')
         <a class="btn btn-danger" onclick="return confirm('هل أنت متأكد من الغاء هذا الطلب؟')" href="{{url('cancel_appoint',$carts->id)}}">الغاء الحجز </a>      
 
         @endunless
         {{-- <td style="padding:10px; font-size: 15px;color:rgb(0, 179, 0);">{{$user->status}} </td> --}}
 
         {{-- <a href="{{url('cancel_appoint',$carts->id)}}" onclick="return confirm('هل أنت متأكد من الغاء هذا الطلب؟')" class="btn btn-danger">الغاء الحجز </a> --}}
-        @unless($carts->status == 'مقبول' OR $carts->status == 'ملغي' or $carts->status == 'بإنتظار المراجعة'   )
+        @unless($carts->status == 'مقبول' OR $carts->status == 'ملغي' OR $carts->status == 'بإنتظار_المراجعة'   )
         <select name="" id="" dir="ltr" style="align-content: center">
           <option value="1">&#9733;</option>
           <option value="2">&#9733;&#9733;</option>
@@ -137,6 +138,7 @@ th, td {
    
         
         </select>
+   
         @endunless
 
       

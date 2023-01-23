@@ -18,3 +18,24 @@
   <link rel="stylesheet" href="admin/assets/css/style.css">
   <!-- End layout styles -->
   <link rel="shortcut icon" href="admin/assets/images/favicon.png" />
+
+  <style>
+    .status-مقبول {
+    color: rgb(0, 180, 0);
+}
+
+.status-ملغي {
+    color: rgb(255, 0, 0);
+}
+
+
+/* ما زبط تغير لون الكلمة لما يكون من مقطعين */
+
+.status-تم_التسليم {
+    color: blue;
+}
+
+.status-بإنتظار_المراجعة {
+    color: light;
+}
+  </style>

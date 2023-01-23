@@ -90,6 +90,7 @@ Route::get('/cancel/{id}',[AdminController::class,'cancel']);
 
 Route::get('/search_user',[AdminController::class,'search_user']);
 Route::get('/search_request',[AdminController::class,'search_request']);
+Route::get('/finsh_order/{id}',[AdminController::class,'finsh_order']);
 
 
 
